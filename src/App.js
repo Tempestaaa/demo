@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import {} from "antd"
+import { Pagination } from "antd"
+import React from "react";
 import './App.css';
+import AppHeader from "./Components/Header";
+import PageContent from "./Components/PageConent";
+// import AppFooter from "./Components/Footer";
+
+// import InfiniteScroll from "react-infinite-scroll-component";
+
 
 function App() {
+  // const App = () => <Pagination defaultCurrent={1} total={50} />;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="App"> 
+      <AppHeader />
+      <PageContent />
+      {/* <AppFooter /> */}
+      <Pagination defaultCurrent={1 } total={500} style={{
+        display: 'flex', 
+        justifyContent: 'center',
+      }}/>
     </div>
   );
 }
+
 
 export default App;
